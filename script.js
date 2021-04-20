@@ -1,47 +1,26 @@
-function teste() {
-    var data = new Date()
-    var ano = data.getFullYear()
-    var fano = document.getElementById('textano')
-    var res = document.getElementById('res')
+function contar() {
+    let inicio = document.getElementById("inicio")
+    let fim = document.getElementById("fim")
+    let passo = document.getElementById("passo")
+    let res = document.getElementById("res")
 
-
-
-    if (fano.length === 0 || Number(fano.value) > ano) {
-        window.alert('[ERRO]')
+    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        alert("[ERRO] Faltam dados!")
     } else {
-        var fsex = document.getElementsByName("radsex")
-        var idade = ano - Number(fano.value)
-        var genero = ""
-        var img = document.createElement("img")
-        img.setAttribute("id", "foto")
+        res.innerHTML = `Contando: `
+        let i = Number(inicio.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
 
-        console.log (fsex[0])
-        if (fsex[0].checked) {
-            genero = "Homem"
-            if (idade < 10) {
-                img.setAttribute("src", "bebemenino.png")
-                
-            } else if (idade < 21) {
-                img.setAttribute("src", "jovemhomem.png")
-            } else if (idade < 50) {
-                img.setAttribute("src", "adultohomem.png")
-            } else {
-                img.setAttribute("src", "senhorhomem.png")
-            }
-        } else if (fsex[1].checked) {
-            genero = "Mulher"
-    
-        if (idade < 10) {
-            img.setAttribute("src", "bebemenina.png")
-        } else if (idade < 21) {
-            img.setAttribute("src", "jovemmulher.png")
-        } else if (idade < 50) {
-            img.setAttribute("src", "adultamulher.png")
-        } else {
-            img.setAttribute("src", "senhoramulher.png")
+        if (i<f){
+        for (let c = i; c <= f; c += p) {
+            res.innerHTML += `${c} ☛`
         }
+        }else{
+            for(let c =i; c>=f;c-=p){
+                res.innerHTML += `${c} ☛`
+            }
+        }
+        res.innerHTML+= `✔`
     }
-    }
-    res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
-    res.appendChild(img)
 }

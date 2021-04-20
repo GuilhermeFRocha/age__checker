@@ -5,51 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de idade</title>
+    <title>Contador</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Verificador de idade</h1>
-    </header>
-    <div class=" container">
 
-        <section class="caixa1">
-            <div>
-                <h2>Verificar Idade</h2>
-                <p>Digite o ano de nascimento:</p>
-                <input class="dt" type="number" name="textano" id="textano" min="0">
-                <h3>Sexo</h3>
-                <div class="sexo">
-                    <input type="radio" name="radsex" id="mas" checked>
-                    <label for="mas">Masculino</label>
-                    <input type="radio" name="radsex" id="fem">
-                    <label for="fem">Feminino</label>
-                </div>
-                
-                <p class="btn">
-                    <input class="bt" type="button" value="Verificar" onClick="teste()">
-                </p>
-                
-                <p>Preencha os dados acima</p>
+    <div class="caixa">
+        <header>
+            <h1>Contador</h1>
+        </header>
 
+        <section class="container">
+            <div class="p">
+                
+                <p>Inicio:</p>
+                <input type="number" name="inicio" id="inicio">
+                <p>Fim: </p>
+                <input type="number" name="fim" id="fim"> 
+                <p>Intervalo: </p>
+                <input type="number" name="passo" id="passo">
+                <p><input class="bt" type="button" value="Contar" onClick="contar()"></p>
             </div>
 
-        </section>
-
-        <section class="caixa2">
             <div id="res">
+               <p>Preparando contagem...</p>
             </div>
-
         </section>
+    
 
-    </div>
     <footer>
         <p>&copy; CursoemVideo</p>
-        
-    </footer>
 
+    </footer>
+</div>
     <script src="script.js"></script>
 
 </body>
