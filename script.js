@@ -18,9 +18,8 @@ function teste() {
         console.log (fsex[0])
         if (fsex[0].checked) {
             genero = "Homem"
-            if (idade < 10) {
+            if (idade == 0 && idade < 10) {
                 img.setAttribute("src", "bebemenino.png")
-                
             } else if (idade < 21) {
                 img.setAttribute("src", "jovemhomem.png")
             } else if (idade < 50) {
@@ -31,7 +30,7 @@ function teste() {
         } else if (fsex[1].checked) {
             genero = "Mulher"
     
-        if (idade < 10) {
+        if (idade == 0 && idade < 10) {
             img.setAttribute("src", "bebemenina.png")
         } else if (idade < 21) {
             img.setAttribute("src", "jovemmulher.png")

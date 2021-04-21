@@ -10,14 +10,10 @@ body{
     font: normal 15pt Arial;
 }
 
-header{
-    text-align: center;
-    margin: 25px 0;
-    
-}
-
 header {
     color: lime;
+    text-align: center;
+    margin: 10px;
 }
 
 
@@ -26,7 +22,7 @@ header {
     width: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+
     margin: 0 auto;
     box-shadow: 3px 3px 10px black;
     border-radius: 10px;
@@ -56,7 +52,7 @@ h2{
     width: 100%;
     box-shadow: 3px 3px 10px black;
     border-radius: 10px;
-    
+
     height: 100%;
 
 }
@@ -74,14 +70,14 @@ h2{
     margin-top: 30px;
     line-height: 1.2rem;
     margin-right: 80px;
-    
+
 }
 
 input {
     height: 1.2rem;
     width: 100%;
     border-radius: 10px;
-    
+
 }
 .dt{
     font-size: 20px;
@@ -119,6 +115,7 @@ transition: background 0.2s ease-in;
         margin: initial;
 	    opacity: 1;
 	}
+    
 }
 
 .bt:hover {
@@ -126,8 +123,9 @@ transition: background 0.2s ease-in;
 }
 
 .btn{
+
     text-align: center;
-    
+
 }
 
 
@@ -143,19 +141,17 @@ transition: background 0.2s ease-in;
     animation: aumenta 0.6s linear;
 }
 @keyframes aumenta {
- 
+
     from {
         transform: scale(0.5);
 
     }
- 
+
     to {
 transform: scale(1);
 
     }
 }
-
-
 div {
     text-align: center;
     padding: 8px;
